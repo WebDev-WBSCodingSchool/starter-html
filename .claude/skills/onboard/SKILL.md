@@ -46,8 +46,9 @@ of the sections below they actually need.
 - **`onboarding: false`** — the student is **working alone**. There is no huddle,
   no plan file, no split, and `--issues` has nothing to derive from. Everything
   else on this page still applies: the orientation, the preflight checks, the
-  setup, the branch. Where the brief carries an interpretation question, ask it —
-  once, before any code. Solo, the assumption that would have been argued about
+  setup, the branch. Two things from the huddle are still worth one turn each:
+  the scoping question (step 3), and whatever the brief names as the thing to
+  settle before any code. Solo, the assumption nobody would have argued about
   gets made silently instead, which is worse, not better.
 
 **You facilitate. You write no part of the plan file.** It is denied to you, and
@@ -151,32 +152,57 @@ here, while nobody is in a hurry. It is the easiest mistake on this project.
 Only where this repo has a plan file, and only when there is not one yet.
 
 This is a conversation, not a form. **Ask one thing at a time and let them
-answer.** The point of it is that four people discover they meant four different
-things, and that only happens if nobody is filling silences.
+answer.** Every question is about their project, in the concrete. A question that
+would fit any other group's project is one they will answer with a slogan, or not
+answer at all.
 
 1. **What are you building?** In their words, not the brief's.
 2. **Who uses it?** If they name the course — the instructor, the presentation —
    ask who would use it if it were not an assignment.
-3. **What does *done* look like?** Concretely enough to disagree about. Asking
-   what is deliberately **not** in it is often faster than asking what is.
-4. **The interpretation question — or questions.** If the brief names them, those
-   are the questions, and it also says how to run them: some assignments want a
-   list talked through **together**, with nobody put on the spot and no going
-   round the room. The brief is the contract, so follow it rather than the
-   default below. Where it names none, take the requirement most open to
-   interpretation and ask **what did each of you think it meant?** — each member
-   separately, out loud, before anyone hears the others.
+3. **How much of it?** Not *what does done look like* — that is an essay question,
+   and a group staring at a brief they read an hour ago cannot answer it. Take
+   what they have just described and ask about the parts of it that could
+   plausibly be dropped, as alternatives with an answer in them. What the
+   alternatives are comes from their project — the whole design or the first
+   three sections, one page or several, real content or placeholders, every
+   feature in the brief or the two that make it work at all — but the shape is
+   always two named options, never an open question.
+4. **The split.** Walk the requirements and let them claim work until everyone has
+   at least one. If they stall, ask what the next thing that has to exist is.
+5. **What the split missed.** Read their split back against the requirement list
+   — the whole list in `README.md`, not only the tasks in `config.json` — and name
+   what nobody took. Publishing the thing is the one that goes missing in almost
+   every group, and the shell everyone else builds on top of is the other. One at
+   a time, and ask who — never assign it. Where the thing nobody took is one the
+   agent may write from day one, say that instead of asking for a volunteer; the
+   README is what says which side of the line it falls on.
+6. **Where two of them meet.** From what they have described, name the specific
+   places their areas touch: the file they will both have open, the element
+   sitting across the line they have just drawn, the task that cannot start until
+   someone else's exists. Where that is genuinely undecided, ask whose it is.
+   Where it is decided but still going to be awkward — one person's CSS moving
+   something that lands in another person's section, two people needing the same
+   stored object to have the same shape — **say it once and let it stand.** They do not have to solve it today. They have to have heard it before
+   they walk into it.
 
-   Either shape, this is the highest-value part of the huddle: it is what
-   reliably surfaces a split assumption while it is still cheap. Write down what
-   they land on. It does not have to be right; it has to be shared.
-5. **Then the tasks.** Walk the requirements and let them claim work until
-   everyone has at least one. If they stall, ask what the next thing that has to
-   exist is.
-6. **Where the work concentrates.** If the README names a file or a requirement
-   everyone lands in, say it now, once. Two people in the same function is a
-   merge conflict they will resolve together, and in this project the conflicts
-   are the lesson — say so, do not engineer it away.
+**Where the brief names what this group has to settle**, those are the things. It
+has already picked them, and they are specific to this assignment in a way the
+requirement table does not show. Work them into the conversation rather than
+reading them out as a list: the ones about the whole project — a convention
+everyone has to share, what *done* means for one section — belong with step 3,
+before the split; the ones about a particular part belong after it, once there is
+someone whose part it is. Talked through together, with nobody put on the spot.
+
+Merge conflicts belong to that last one. Where two of them will be in the same
+file, that is not a planning failure to engineer away — on these projects the
+conflicts are part of what the week teaches, so say so rather than re-cutting the
+split to dodge them.
+
+**Never go round the room.** Do not ask them to answer separately before they hear
+each other, do not ask what each of them privately thought a requirement meant,
+and do not stage a disagreement to see what falls out. Split assumptions do
+surface in this conversation — they surface because questions 5 and 6 are concrete
+enough that two people answer them differently without being asked to perform.
 
 ### How to press
 
