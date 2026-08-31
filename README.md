@@ -5,8 +5,8 @@ as a team, and it is a website: semantic HTML, hand-written CSS, live on GitHub
 Pages when you are done.
 
 This repo is your starting point. **Fork it once for your group** and add your team
-members as collaborators. One fork, everyone works in it, every change merges to
-`main` through a Pull Request.
+members as collaborators. One fork, everyone works in it, and every change merges
+to `main` through a Pull Request.
 
 **The design is yours, and there are two ways to get one.** Take the barebones
 Figma wireframe and make it your own, or pick a site you like from
@@ -17,22 +17,22 @@ together, and write it in `PLAN.md` so nobody is still designing on day two.
 
 ## Where you are
 
-Five stages. Each one says what ends it, because that is the part nobody can see
-from inside it.
+Five stages. Each stage names what ends it, which is the part easy to lose sight
+of from the inside.
 
-1. **Fork it, clone it, run `/onboard`.** Ends when the only thing the check still
-   objects to is `PLAN.md`. That one is stage 2, and it stays red until you get
-   there. Everything above it should be a tick.
-2. **Meet, and write `PLAN.md` together.** Ends when the check is green: every
+1. **Fork it, clone it, run `/onboard`.** Ends when the only open item is
+   `PLAN.md`. That is stage 2, and it stays open until you get there.
+   Everything above it should pass.
+2. **Meet, and write `PLAN.md` together.** Ends when the check passes: every
    member listed has a task line, and your own git email is one of them. Until
    then the agent writes no code for anyone in the group.
-3. **Pick a task, cut a branch.** `git switch -c <task-id>-<short-name>`. Ends when
-   you have somewhere to put the work that is not `main`.
-4. **Write it, commit it, explain it.** Ends when it is committed. Nothing opens up
-   on this project, because the HTML and the CSS are yours for both days, but tell
-   the agent you are done with a piece and it will ask you how it works.
-5. **Open a Pull Request.** Ends when it is merged. Then back to 3 with the next
-   task.
+3. **Pick a task, cut a branch.** `git switch -c <task-id>-<short-name>`. Ends
+   when you have a branch for the work instead of committing to `main`.
+4. **Write it, commit it, explain it.** Ends when your change is committed.
+   Explanation is an optional self-check here. Nothing opens task by task; the
+   whole exercise gets one `--done` record when it is finished.
+5. **Open a Pull Request.** Ends when it is merged. Then return to stage 3 with
+   the next task.
 
 ## The requirements
 
@@ -50,9 +50,9 @@ from inside it.
 | **FR010** | *Stretch:* **responsive.** Desktop first; if you have time, make it work on a phone. |
 
 **Bold = you type this one yourself, and here that is all of it.** Every
-requirement above that produces HTML or CSS is yours, both days. Nothing unlocks
-part-way through: write and explain the header and the agent still will not write
-your footer. It stays that way until the project is over.
+requirement above that produces HTML or CSS stays yours until the group marks the
+exercise done. Nothing opens one bold item at a time. The write check opens all
+the HTML and CSS at once afterwards, and you still have to ask for any change.
 
 FR008 and FR009 are bold for a different reason. They are not code, so there is
 nothing for anyone to type on your behalf. They are also the two most likely to be
@@ -78,7 +78,7 @@ You start with `index.html` and `css/style.css`. More pages, or more stylesheets
 (extra `<link>` tags, or `@import` at the top of this one), are yours to add if you
 want them. Nothing has to be installed, and nothing here is generated.
 
-## What you type, and what the agent types
+## What you type, and where the agent can help
 
 **Two topics, and between them they are the entire site: semantic HTML and CSS.**
 The elements you choose and the structure they make; the layout you build with
@@ -90,7 +90,7 @@ chat for you to copy across. That is not it being difficult with you. You have t
 days to build something your hands know how to do, and there is no version of that
 where something else does the typing.
 
-**Everything else the agent can write, from day one:**
+**Everything else you may ask the agent to help implement:**
 
 - **Git, and on this project that is the big one.** Five people and two files
   means merge conflicts. That is not a mistake anyone made, it is what the workflow
@@ -122,12 +122,12 @@ it at `AGENTS.md` yourself.
 
 **The agent waits to be asked.** It will not start building because a file is empty
 or because your plan is finished. None of this is a to-do list it works through on
-its own. Ask it for what you want, and expect it to ask you back when there is
-something to decide.
+its own. Ask it for what you want. Before every code edit, it asks at least one
+question about your requested change and waits for your answer.
 
 Yes, this tells you exactly what you could paste into a browser chat instead. You
-are being told the rule rather than fenced in by it, because a rule you can read is
-one you can decide to keep.
+are given the rule directly rather than fenced in by it. A rule you can read is
+one you can choose to follow.
 
 ## Write it, commit it, explain it
 
@@ -146,17 +146,9 @@ short follow-ups: more for a big commit, fewer for a small one. Nothing is grade
 and nothing you say is written down. The commit ahead of it in the history is
 already the record of who wrote what.
 
-**Nothing changes afterwards, and that is the point here.** Step 3 earns you no
-help: the HTML and the CSS stay yours whether you explain them or not. Say "I'm
-done with the navbar" and the agent will read your commit and ask you about it. Say
-no and it drops the subject. Ask for it again a day later and it will do it then.
-It is a mirror, not a gate, and it is the cheapest way to find out that you know
-why you wrote something.
-
-When the project is finished and committed, one person runs
-`node .claude/hooks/signoff.mjs --done`. That records the exercise as finished and
-opens the gated set, which by then only matters for anything you want to build on
-top of what you wrote.
+Once all the HTML and CSS is written and committed, and optionally explained as a
+self-check, one person runs `node .claude/hooks/signoff.mjs --done`. This records
+the whole exercise once and opens the protected HTML and CSS.
 
 ### Signing your commits
 
@@ -182,10 +174,10 @@ every member listed in it has at least one task.** Meet first, one call with one
 screen shared, and write it together.
 
 Two halves. First, a short restatement **in your own words**: what you are
-building, who uses it, and how much of it you are actually going to build, meaning
-which parts of the design are in and which you are leaving out on purpose. That
-last one is where two of you find out you pictured different amounts of work, so
-write down what you land on.
+building, who uses it, and how much of it you are actually going to build. That
+means naming which parts of the design are in and which you are leaving out on
+purpose. That last point is where two of you find out you pictured different
+amounts of work, so write down what you agree on.
 
 Then the split. Everyone's **git email**, the address `git config user.email`
 prints, and each of you again on the task you took:
@@ -200,15 +192,15 @@ prints, and each of you again on the task you took:
 - Settings page (T2) — Mo Ahmadi
 ```
 
-That is the whole format. A list, a table, prose, German, English: it does not
-care. Each of you has to turn up twice, once in the member list with your **git**
-email, and again on the task you took. On the task line your name is enough. The
-address is only needed once, because that is what your progress is filed under.
+That is the whole format. Use a list, a table, or prose, in German or English.
+Each of you has to appear twice: once in the member list with your **git** email,
+and again on the task you took. On the task line your name is enough. The address
+is needed once, because progress is filed under it.
 
-Run `/onboard` and the agent will run the conversation, name the parts nobody has
-claimed and the places two of you will collide, and check the file. **It will not
+Run `/onboard` and the agent will guide the conversation, point out unassigned
+parts and places where two of you will collide, and check the file. **It will not
 write a word of it.** `PLAN.md` is what the check reads, so an agent that could
-write it could clear its own way.
+write it would clear its own way.
 
 **The check is live.** Edit `PLAN.md` so that someone has no task and the agent
 stops writing code for everyone until the line is fixed. There is nothing to
@@ -224,9 +216,10 @@ plan, never whether it was any good.
 Issues on your fork.** `/onboard` can create them from your task lines, or make
 them by hand. The issues are the live version and nothing syncs them back.
 
-Write them yourselves either way. The agent will not hand you a breakdown. Once you
-have a draft it will tell you if the load looks lopsided, if something is blocked
-on two other people, or if two of you are about to land in the same function.
+Write them yourselves either way. The agent will not give you a breakdown. Once
+you have a draft it will tell you if the load looks lopsided, if something is
+blocked on two other people, or if two of you are about to edit the same part of
+a file.
 
 That last one will happen, and you can see it coming from here. For the first day
 this whole project is `index.html` and `css/style.css`, so every one of you is
@@ -251,16 +244,17 @@ did at home end up in two separate records, and neither counts for the other.
 **If you want the agent to talk differently**, with simpler language, shorter
 answers, or more or less detail, say so, and ask it to save that as a personal
 skill in `~/.claude/skills/`. It travels with you to the next project, so you only
-have to ask once. It changes how the agent talks, not what it may write.
+have to ask once. It changes how the agent talks, not which code you must write
+yourself.
 
 Inline suggestions (Copilot-style ghost text) are turned off for this folder in
-`.vscode/settings.json`. That file is read-only, and the agent cannot write to it
-at all. Otherwise it could hand ghost text back in a single edit, and ghost text is
-the one form of help that arrives without being asked for.
+`.vscode/settings.json`. That file is read-only, and the agent cannot write to it.
+Otherwise it could restore ghost text in a single edit, and ghost text is the one
+form of help that arrives without being asked.
 
 **This file is read-only too**, along with `CLAUDE.md`. This page is the
-requirements: it is what the agent reads to work out what it may write for you and
-what it may only talk you through, so it is not a page the agent gets to reword.
+requirements: it tells the agent which code you must write and where it may help
+after you ask, so it is not a page the agent gets to reword.
 `PLAN.md` is read-only to the agent as well, for a different reason: it is yours,
 and it is what the check reads. Your own writing about your project goes in files
 you make, whether that is `PLAN.md`, your Issues, or anything else you want.
@@ -269,7 +263,7 @@ If you think a requirement is wrong or unclear, say so to your instructor. That 
 a conversation, not a diff.
 
 None of these locks is a cage, and you should know that up front. Read-only here
-means VS Code refuses the keystroke, there is a setting that turns that off, and
-there are other editors. What none of it can do is happen quietly. Every file named
-above is committed, so however you go about changing one, it lands in your PR with
-your name on it. That is the whole mechanism: not "you can't", but "it's visible".
+means VS Code rejects typing in those buffers, there is a setting to change that,
+and you can use other editors. But none of it can happen quietly. Every file
+named above is committed, so any change lands in your PR with your name on it.
+That is the mechanism: not "you cannot", but "it is visible".
